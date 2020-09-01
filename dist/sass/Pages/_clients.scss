@@ -1,0 +1,15 @@
+.clients{
+    padding: $pd-5 0;
+    border-top: 1px solid #eee;
+    .clients__content{
+        width: 80%;
+        margin: 0 auto;
+        img{
+            width: 145px;
+            height: 110px;
+        }
+        img:hover{
+            cursor: pointer;
+        }
+    }
+}

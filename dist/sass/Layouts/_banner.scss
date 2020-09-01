@@ -1,0 +1,108 @@
+.banner{
+    height: 100vh;
+    .banner__content{
+        background-image: url("http://massive.markup.themebucket.net/assets/img/banner/index-banner-2.jpg");
+        background-size: cover; 
+        background-position: center;      
+        height: 100%;
+        width: 100%;
+        background-attachment: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        .banner__content__text{
+            color: $color-white;
+            h1{
+                letter-spacing: 5px;
+                font-size: $fs-h1-lg;
+                font-weight: $fw-0;
+            }
+            h3{
+                letter-spacing: 6px;
+                font-size: $fs-h3-md;
+                font-weight: $fw-1;
+            }  
+                  
+        }       
+    }
+}
+
+// banner 2
+.banner2nd{
+    background-image: url("http://massive.markup.themebucket.net/assets/img/parallax/8.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-attachment: fixed;
+    padding: $pd-6 0;
+    margin-top: $mg-6;
+    
+    .banner2nd__content__text{
+        text-align: center;
+        text-transform: uppercase;
+        p{
+            @include style-text($fs-default-lg + 1, $fw-1, $color-yellow-active);
+            letter-spacing: 3px;
+        }
+        h1{
+            @include style-text($fs-h1-md, $fw-1, $color-white);
+            letter-spacing: 2px;
+            margin-bottom: $mg-3;
+        }
+    }
+    .banner2nd__content__button{  
+        display: flex;
+        justify-content: center;  
+        padding-top: $mg-2;  
+        .btn{
+            padding: 15px $pd-2;
+            color: $color-white;
+            background-color: $color-yellow-active;
+            border-radius: 0;
+            border: 1px solid $color-yellow-active;
+            font-size: $fs-default-lg - 1;
+            line-height: 1;
+        }
+        .btn:hover{
+            color: $color-black-icon;
+            background-color: $color-white;
+            border: 1px solid $color-white;
+        }
+       
+    }
+}
+
+@media screen and (min-width:576px) and (max-width:768px){
+    .banner2nd{ 
+        padding: 125px 0;    
+        .banner2nd__content__text{
+            h1{
+                font-size: 30px;
+            }
+        }      
+    }
+}
+@media screen and (max-width:575px){
+    .banner2nd{ 
+        padding: 100px 0;    
+        .banner2nd__content__text{
+            p{
+                font-size: 12px;
+            }
+            h1{
+                font-size: 15px;
+                margin-bottom: 20px;
+            }
+        } 
+        .banner2nd__content__button{
+            a{
+                &.btn{
+                    padding: 14px 25px;
+                    font-size: 13px;
+                }
+            }
+        }   
+    }
+}

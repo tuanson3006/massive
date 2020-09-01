@@ -1,0 +1,144 @@
+.blog{
+    padding: $pd-5 0;
+    .blog__content{
+        width: 70%;
+        margin: 0 auto;
+        .blog__content__container{
+            .blog__content__left{
+                position: relative;                
+                img{
+                   width: 100%;
+                   height: 100%; 
+                }
+                .blog__content__left__text{
+                    position: absolute;
+                    background: rgba(0, 0, 0, .5);
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    padding: $pd-0 - 2;                   
+                    @include style-text($fs-default-lg, $fw-1, $color-white);                    
+                }
+            }
+            .blog__content__right{
+                padding-left: $pd-4;
+                ul{
+                    list-style: none;
+                    display: flex;
+                    li{
+                        margin-right: $mg-2;
+                        @include style-text($fs-default-md, $fw-1, #909090);
+                        transition: all .5s;
+                        cursor: pointer;
+                    }
+                    li:hover{
+                        color: $color-yellow-active;
+                    }
+                    
+                }
+                h4{
+                    text-transform: uppercase;
+                    @include style-text($fs-h4, $fw-1, $color-black-icon);
+                    letter-spacing: 1px;
+                    transition: all .5s;
+                    cursor: pointer;
+                    padding: $pd-0 0;
+                }
+                h4:hover{
+                    color: $color-yellow-active;
+                }
+                .date{
+                    @include style-text($fs-default-md, $fw-1, #909090);
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    a{
+                        text-decoration: none;
+                        @include style-text($fs-default-md, $fw-1, #909090);
+                        cursor: pointer;
+                    }                                      
+                    a:hover{
+                        color: $color-yellow-active;
+                    }
+                    
+                }
+                p{
+                    @include style-text($fs-default-lg, $fw-1, $color-gray-p);
+                    line-height: 30px;
+                    padding: $pd-2 0;
+                }
+                .btn-read-more{
+                    .btn{
+                        text-transform: uppercase;
+                        color: #bbb;
+                        font-size: 15px;
+                        transition: all .5s;
+                        letter-spacing: 1px;
+                        padding: 0;
+                        i{
+                            padding-left: 5px;
+                        }
+                    }
+                    .btn:hover{
+                       color: $color-black-icon; 
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:992px) and (max-width:1200px){
+    .blog{
+        padding: $pd-5 0;
+        .blog__content{
+            width: 85%;
+        }
+    }
+}
+@media screen and (min-width:768px) and (max-width:991px){
+    .blog{
+        padding: $pd-5 0;
+        .blog__content{
+            width: 90%;
+            .section-content{
+                width: 75%;
+                margin: 0 auto;
+                margin-bottom: 75px;
+            }
+            .blog__content__container{
+                .blog__content__right{
+                    padding-left: 35px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:765px){
+    .blog{
+        .blog__content{
+            width: 90%;
+            margin: 0 auto;
+            .section-content{
+                width: 100%;
+                margin-bottom: 50px;
+                text-align: center;
+            }
+            .blog__content__container{
+                .blog__content__right{
+                    &.col-12{
+                        padding-left: 0;
+                    }
+                    margin-top: 25px;
+                    padding-left: 0;
+                    h4{
+                        padding: 0;
+                    }
+                    p{
+                        padding: 10px 0;
+                    }
+
+                }
+            }
+        }
+    }
+}

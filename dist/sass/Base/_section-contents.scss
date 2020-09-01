@@ -1,0 +1,27 @@
+.section-content{
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: $mg-6;
+    text-align: center;      
+    h3{
+        @include style-text($fs-h3-lg, $fw-1, $color-black-h);
+        text-transform: uppercase;
+        padding-bottom: $pd-0 - 2;
+        position: relative;
+        margin-bottom: $mg-2;
+        letter-spacing: 2px;
+    }
+    h3::after{                
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        width: 60px;
+        height: 2px;
+        transform: translateX(-50%);
+        content: "";
+        background: $color-gray-after ;
+    }
+    p{
+        @include style-text($fs-default-lg, $fw-1, $color-gray-p);
+    }
+}

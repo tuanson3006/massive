@@ -1,0 +1,298 @@
+.members{
+    .members__content{
+        width: 60%;
+        margin: 0 auto;
+        .members__content__item{
+            position: relative;
+            width: 100%;
+            padding: 0 $pd-2;
+            .members__info{
+                position: relative; 
+                width: 100%;   
+                img{
+                    width: 100%;
+                    height: auto;
+                }          
+                .members__info__details{
+                    position: absolute;
+                    width: 70%;
+                    right: 0;
+                    bottom: 30px;
+                    padding: 10px $pd-1;
+                    text-align: right;
+                    background-color: rgba(0, 0, 0, .7);
+                    h5{
+                        @include style-text($fs-default-lg - 1, $fw-1, $color-white);
+                        letter-spacing: 2px;
+                    }
+                    p{
+                        @include style-text($fs-default-md, $fw-1, rgba(255, 255, 255, .5));
+                        letter-spacing: 2px;
+                        margin: 0;
+                    }
+                }
+                .members__quotes{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    border: 20px solid rgba(0, 0, 0, .1);
+                    background-color: rgba(255, 255, 255, .9);
+                    width: 100%;                  
+                    opacity: 0;
+                    transition: all .3s;
+                    text-align: center;
+                    h5{
+                        @include style-text($fs-default-lg - 1, $fw-1, $color-black-icon);
+                        letter-spacing: 4px;
+                        text-transform: uppercase;
+                        transform: translateY(300%);
+                        transition: all .3s;
+                    }
+                    p{
+                        line-height: 30px;
+                        @include style-text($fs-default-lg - 1, $fw-1, $color-gray-p);
+                        transform: translateY(50%);
+                        transition: all .3s;
+                    }
+                    .members__quotes__socials{
+                        position: absolute;
+                        bottom: 30px;
+                        left: 35%;
+                        transform: translateY(-40%);                        
+                        transition: all .3s;
+                        i{
+                            color: $color-black-icon;
+                            font-size: $fs-default-lg + 1;
+                            margin: 0 $mg-0; 
+                            cursor: pointer;                         
+                        }
+                        i:hover{
+                            color: $color-yellow-active;
+                            transition: all .3s;
+                        }
+                    }
+                }
+                .members__quotes:hover{
+                    opacity: 1;
+                    h5{
+                        transform: translateY(500%);
+                    }
+                    p{
+                        transform: translateY(100%);
+                    }
+                    .members__quotes__socials{
+                        transform: translateY(-20%);
+                    }
+                }
+            }
+            
+        }
+        .members__content__hiring{                      
+            padding: 0 $pd-2;
+            padding-top: $pd-4;
+            .members__content__hiring__item{
+                background-color: #f5f5f5;
+                width: 100%;
+                padding: $pd-3 + 5;
+                .members__content__hiring__item__left{
+                    text-align: left;
+                    line-height: 1.5;
+                    h3{
+                        @include style-text($fs-h4, $fw-1, $color-black-h);
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                    }
+                    span{
+                        color: $color-yellow-active;
+                    }
+                    p{
+                        @include style-text($fs-default-lg, $fw-1, $color-gray-p);
+                        color: #7e7e7e;
+                    }
+                }
+                .members__content__hiring__item__right{                                       
+                    .members__content__btn{
+                        // position: relative;                                  
+                        .btn{
+                            // position: absolute;
+                            // right: 0;
+                            padding: 15px $pd-2;
+                            color: $color-white;
+                            background-color: $color-black-icon;
+                            border-radius: 0;
+                            border: 1px solid $color-black-icon;
+                            font-size: $fs-default-lg - 1;
+                            line-height: 1;
+                            white-space: nowrap;
+                        }
+                        .btn:hover{
+                            background-color: $color-yellow-active;
+                            border: 1px solid $color-yellow-active;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:992px) and (max-width:1200px){
+    .members{
+        .members__content{
+            width: 90%;
+            .container-fluid{
+                padding: 0;
+                .members__content__item{               
+                    .members__quotes:hover{
+                        opacity: 1;
+                        h5{
+                            transform: translateY(100%);
+                        }
+                        p{
+                            transform: translateY(25%);
+                        }
+                        .members__quotes__socials{
+                            transform: translateY(150%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:768px) and (max-width:991px){
+    .members{
+        .members__content{
+            width: 80%;
+            .container-fluid{
+                padding: 0;
+                .members__content__item{
+                    margin-bottom: 20px; 
+                    .members__quotes__socials{
+                        left: 40%;                       
+                    }              
+                    .members__quotes:hover{
+                        h5{
+                            font-size: 24px;
+                            transform: translateY(600%);
+                        }
+                        p{
+                            transform: translateY(300%);
+                            font-size: 16px;
+                        }
+                        .members__quotes__socials{
+                            transform: translateY(-20%);
+                            i{
+                                font-size: 25px;                        
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:380px) and (max-width:767px){
+    .members{
+        .members__content{
+            width: 100%;
+            .section--content{
+                width: 80%;
+                margin-bottom: 60px;
+            }
+            .container-fluid{
+                .members__content__item{
+                    margin-bottom: 20px; 
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:379px){
+    .members{
+        .members__content{
+            width: 100%;
+            .section--content{
+                width: 80%;
+                margin-bottom: 60px;
+            }
+            .container-fluid{
+                .members__content__item{
+                    margin-bottom: 20px; 
+                    .members__info__details{
+                        width: 85%;
+                    }
+                    .members__quotes:hover{
+                        h5{
+                            transform: translateY(200%);
+                            font-size: 14px;
+                            letter-spacing: 2px;
+                        }
+                        p{
+                            transform: translateY(100%);
+                            line-height: 20px;
+                            font-size: 13px;
+                            padding: 0 10px;
+                        }
+                        .members__quotes__socials{
+                            transform: translateY(150%);
+                            left: 20%;
+                            i{
+                                font-size: 16px;                        
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:500px){
+    .members{
+        .members__content{
+            .members__content__hiring{                      
+                .members__content__hiring__item{
+                    padding: 20px;
+                    .members__content__hiring__item__left{
+                        p{
+                            font-size: 13px;
+                        }
+                    }
+                    .members__content__hiring__item__right{                                       
+                        .members__content__btn{                                 
+                            .btn{
+                                padding: 13px 25px;
+                                font-size: 13px;
+                                line-height: 1;
+                                white-space: nowrap;
+                            }
+                        }                       
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:769px){
+    .members{
+        .members__content{
+            .members__content__hiring{                      
+                .members__content__hiring__item{
+                    .members__content__hiring__item__right{                                       
+                        .members__content__btn{
+                            position: relative;                                  
+                            .btn{
+                                position: absolute;
+                                right: 0;
+                            }
+                        }                        
+                    }
+                }
+            }
+        }
+    }
+}
