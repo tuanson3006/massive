@@ -1,0 +1,126 @@
+header{
+    background-color: #0a0a0a;
+    z-index: 1000;
+    height: 60px;
+    .header__content{
+        position: relative;
+        background-color: #0a0a0a;
+        height: 60px;
+        padding: 0 30px;
+        .navbar{
+            .row{
+                height: 60px;
+                .header__content__left{
+                    img{
+                        height: 60px;
+                        width: 60px;
+                    }
+                }
+                .header__content__right{                    
+                    button{
+                        position: absolute;
+                        right: 0;
+                        top: -100%;
+                        transform: translateY(50%);
+                        color: white;                       
+                        span{
+                            color: white;
+                            width: 30px;
+                            height: 30px;
+                            background-color: white;
+                        }
+                        span:focus{
+                            border: transparent;
+                        }
+                    }
+                    button:focus{
+                        border: transparent;
+                    }
+                    .navbar-collapse{
+                        transition: all .5s;
+                        .navbar-nav{
+                            display: flex;                           
+                            justify-content: flex-end;
+                            align-items: center;
+                            .nav-item{
+                                list-style: none;
+                                text-decoration: none;
+                                text-transform: uppercase;
+                                transition: all .5s;
+                                .nav-link{
+                                    display: inline-block;
+                                    color: white;
+                                    font-size: 13px;
+                                    padding: 0 0 0 24px;
+                                    line-height: 60px;
+                                    letter-spacing: .5px;
+                                }
+                                span{
+                                    font-size: 13px;
+                                    color: white;
+                                }
+                                &.active{
+                                    span{
+                                        color: $color-yellow-active;
+                                    }
+                                    .nav-link{
+                                        color: $color-yellow-active;
+                                    }
+                                }
+                                
+                            }
+                            .nav-item:hover{
+                                span{
+                                    color: $color-yellow-active;
+                                }
+                                .nav-link{
+                                    color: $color-yellow-active;
+                                }
+                            }
+                            
+                        }
+                        &.show{
+                            .navbar-nav{
+                            z-index: 1000;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: start;
+                                .nav-item{
+                                    position: relative;
+                                    width: 100%;
+                                    height: 100%;
+                                    background-color: $color-white;
+                                    border-bottom: solid 1px #f0f0f0;
+                                    cursor: pointer;
+                                    .nav-link{
+                                        padding: 12px 20px;
+                                        color: $color-black-h;
+                                        line-height: 20px;
+                                    }
+                                    span{
+                                        position: absolute;
+                                        top: 0;
+                                        right: 0;
+                                        width: 60px;
+                                        height: 45px;
+                                        text-align: center;
+                                        border-left: solid 1px #f5f5f5;
+                                        font-size: 22px;
+                                        line-height: 43px;
+                                        color: $color-black-h;
+                                    }
+                                    &.div--item{
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+        
+    }
+}
+

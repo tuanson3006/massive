@@ -1,0 +1,152 @@
+.tabs{
+    background-image: url("http://massive.markup.themebucket.net/assets/img/pattern-2.png");
+    background-repeat: repeat;  
+    background-attachment: fixed;
+    .tabs__content{               
+        width: 70%;
+        height: 100%;
+        margin: 0 auto;
+        padding: $pd-5 0;
+        .tabs__content__icons{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            .tabs__content__icons__items{
+                position: relative;
+                text-align: center;
+                padding: $pd-3 $pd-4;
+                background-color: rgba(34, 34, 34, .05);
+                line-height: 1;
+                @include style-text($fs-h1-md, $fw-1, $color-black-icon);
+                transition: all .5s;
+                &.active{
+                    background-color: $color-white;
+                    &::after{
+                        content: "";
+                        position: absolute; 
+                        left: 50%;                                    
+                        bottom: -10px;
+                        transform: rotate(45deg);                   
+                        margin-left: -10px;
+                        border: solid 10px;
+                        border-color: transparent white white transparent;
+                    }
+                }
+                cursor: pointer;
+                i{
+                    display: inline;
+                }                    
+            }           
+            .tabs__content__icons__items::after{                
+                    content: "";
+                    position: absolute; 
+                    left: 50%;                                    
+                    bottom: -10px;
+                    transform: rotate(45deg);                   
+                    margin-left: -10px;
+                    border: solid 10px transparent;
+                    transition: all .5s;                                          
+            } 
+            .tabs__content__icons__items:hover{
+                background-color: $color-white;
+                &::after{
+                    border-color: transparent white white transparent;
+                }
+            }
+        }
+        .tabs__content__details{
+            padding: $pd-2 0;
+            width: 90%;
+            h5{
+                @include style-text($fs-default-lg - 1, $fw-1, $color-gray-p);
+                letter-spacing: 2px;
+                text-transform: uppercase;
+            }
+            h4{
+                @include style-text($fs-h2, $fw-1, $color-black-h);
+                letter-spacing: 2px;
+                line-height: 1.5;               
+                margin-bottom: 50px;
+                text-transform: uppercase;
+            }
+            p{
+                @include style-text($fs-default-lg, $fw-1, $color-black-1);
+                line-height: 2;
+            }
+        }
+    }
+}
+@media screen and (max-width:767px){
+    .tabs{
+        .tabs__content{
+            width: 90%;
+            .tabs__content__icons{
+                display: block;
+                width: 100%;
+                .tabs__content__icons__items{
+                    padding: 20px 45px;
+                    font-size: 30px;
+                    margin-bottom: 15px;
+                }
+            }           
+        }       
+    }
+}
+@media screen and (min-width:768px) and (max-width:991px){
+    .tabs{
+        .tabs__content{
+            width: 90%;
+            .tabs__content__icons{
+                width: 85%;
+                .tabs__content__icons__items{
+                    padding: 20px 45px;
+                    font-size: 30px;
+                }
+            }           
+        }       
+    }
+}
+@media screen and (min-width:992px) and (max-width:1100px){
+    .tabs{
+        .tabs__content{
+            width: 80%;
+            .tabs__content__icons{
+                width: 90%;
+                .tabs__content__icons__items{
+                    padding: 25px 55px;
+                    font-size: 30px;
+                }
+            }         
+        }      
+    }
+}
+@media screen and (min-width:1101px) and (max-width:1379px){
+    .tabs{
+        .tabs__content{
+            width: 70%;
+            .tabs__content__icons{
+                width: 90%;
+                .tabs__content__icons__items{
+                    padding: 25px 55px;
+                    font-size: 30px;
+                }
+            }            
+        }        
+    }
+}
+@media screen and (min-width:1380px) and (max-width:1450px){
+    .tabs{
+        .tabs__content{
+            width: 80%;
+        }
+    }
+}
+@media screen and (min-width:1451px) and (max-width:1600px){
+    .tabs{
+        .tabs__content{
+            width: 75%;
+        }
+    }
+}

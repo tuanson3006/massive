@@ -1,0 +1,170 @@
+.experience{
+    background-image: url("http://massive.markup.themebucket.net/assets/img/parallax/4.jpg");
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-attachment: fixed;
+    position: relative; 
+    .experience__content__overlay{
+        position: absolute;
+        top: 0;            
+        right: 0;
+        bottom: 0;
+        width: 50%;
+        background-color: rgba(0, 0, 0, .5);
+    }
+    .experience__content{
+        padding: $pd-5 0;
+        width: 80%;
+        margin: 0 auto;
+                 
+        .experience__content__text{           
+            h3{                
+                letter-spacing: 6px;
+                @include style-text($fs-h3-lg, $fw-1, $color-white);               
+            }
+        }
+        
+        .experience__content__details{
+            padding: 0 $pd-2;
+            h4{
+                @include style-text($fs-h4, $fw-1, $color-white);
+                letter-spacing: 2px;
+                margin-bottom: $mg-3;
+                text-transform: uppercase;
+            }
+            p{
+                @include style-text($fs-default-lg, $fw-1, $color-white);
+                margin-bottom: $mg-3;
+                line-height: 30px;
+            }
+
+            // progress bar
+            .experience__content__details_progress{
+                .progress{
+                    margin-top: $mg-0;
+                    margin-bottom: $mg-4;
+                    border-radius: 0;
+                    background: $color-gray-progress;
+                    height: 20px;
+                    overflow: visible;
+                    .progress-bar{
+                        position: relative;
+                        overflow: visible;
+                        padding-top: 0;
+                        padding-left: 10px;
+                        text-align: left;
+                        color: #222;
+                        background: #fff;
+                        box-shadow: none;
+                        font-size: 10px;
+                        line-height: 20px;
+                        
+                        span{
+                            position: absolute;
+                            top: -28px;
+                            right: -5px;
+                            display: inline-block;
+                            min-width: 25px;
+                            height: 20px;
+                            padding: 0 8px;
+                            text-align: center;
+                            letter-spacing: 0;
+                            color: $color-black-default;
+                            border-radius: 30px;
+                            background-color: $color-gray-0; 
+                            line-height: 20px;
+                        } 
+                        span::before{
+                            position: absolute;
+                            bottom: -2px;
+                            left: 15px;
+                            display: block;
+                            width: 5px;
+                            height: 5px;
+                            content: "";
+                            -webkit-transform: rotate(45deg);
+                            -moz-transform: rotate(45deg);
+                            -ms-transform: rotate(45deg);
+                            transform: rotate(45deg);
+                            border-style: none;
+                            border-color: $color-gray-0;
+                            border-right: 1px solid $color-gray-0;
+                            background-color:$color-gray-0;
+                        }
+                        &.progress-bar--0{
+                            animation: progress_0 2s;
+                        }
+                        &.progress-bar--1{
+                            animation: progress_1 2s;
+                        }
+                        &.progress-bar--2{
+                            animation: progress_2 2s;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    @keyframes progress_0 {
+        0%{
+            width: 0;
+        }
+        100%{
+            width: 80%;
+        }
+    }
+    @keyframes progress_1 {
+        0%{
+            width: 0;
+        }
+        100%{
+            width: 90%;
+        }
+    }
+    @keyframes progress_2 {
+        0%{
+            width: 0;
+        }
+        100%{
+            width: 75%;
+        }
+    }
+}
+@media screen and (min-width:768px) and (max-width:992px){
+    .experience{
+        .experience__content{
+            width: 100%;
+            margin: 0;
+            .experience__content__text{
+                text-align: center;
+            }
+            .experience__content__details{
+                padding: 0 20px;
+            }                  
+        }    
+    }
+}
+@media screen and (max-width:767px){
+    .experience{
+        .experience__content__overlay{
+            display: none;
+        }
+        .experience__content{                    
+            .experience__content__text{
+                width: 100%;
+                padding-left: 30px; 
+                text-align: left; 
+       
+            }           
+            .experience__content__details{
+                margin-top: 25px;
+                h4{
+                    margin-bottom: 15px;
+                }
+            }
+        }
+
+    }
+}
